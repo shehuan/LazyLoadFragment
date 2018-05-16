@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.shh.fragmentdemo.ui.activity.TabActivity">
+
+    <FrameLayout
+        android:id="@+id/fl_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/tv_tab0"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#77d353"
+            android:gravity="center"
+            android:text="tab0"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/tv_tab1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#ffbd00"
+            android:gravity="center"
+            android:text="tab1"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/tv_tab2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00a6ff"
+            android:gravity="center"
+            android:text="tab2"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/tv_tab3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#bc9fe3"
+            android:gravity="center"
+            android:text="tab3"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+</LinearLayout>
