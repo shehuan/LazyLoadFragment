@@ -16,30 +16,30 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#00868B"
+            android:background="#98F5FF"
             android:gravity="center"
-            android:text="tabA"
-            android:textColor="#ffffff" />
+            android:text="2-1"
+            android:textColor="#000000" />
 
         <TextView
             android:id="@+id/tv_tab1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#668B8B"
+            android:background="#7FFFD4"
             android:gravity="center"
-            android:text="tabB"
-            android:textColor="#ffffff" />
+            android:text="2-2"
+            android:textColor="#000000" />
 
         <TextView
             android:id="@+id/tv_tab2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#2E8B57"
+            android:background="#4EEE94"
             android:gravity="center"
-            android:text="tabC"
-            android:textColor="#ffffff" />
+            android:text="2-3"
+            android:textColor="#000000" />
 
     </LinearLayout>
 

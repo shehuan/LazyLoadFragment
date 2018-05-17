@@ -47,19 +47,19 @@ public class TabActivity extends BaseActivity {
         fragmentManager = getSupportFragmentManager();
 
         fragments = new BaseFragment[4];
-        fragments[0] = TabFragment.newInstance("tab0");
-        fragments[1] = TabFragment1.newInstance("tab1");
-        fragments[2] = TabFragment.newInstance("tab2");
-        fragments[3] = TabFragment.newInstance("tab3");
+        fragments[0] = TabFragment.newInstance("1-1");
+        fragments[1] = TabFragment1.newInstance("1-2");
+        fragments[2] = TabFragment.newInstance("1-3");
+        fragments[3] = TabFragment.newInstance("1-4");
     }
 
     @Override
     protected void initView() {
         fragmentManager.beginTransaction()
-                .add(R.id.fl_container, fragments[0], fragments[0].getClass().getName())
-                .add(R.id.fl_container, fragments[1], fragments[1].getClass().getName())
-                .add(R.id.fl_container, fragments[2], fragments[2].getClass().getName())
-                .add(R.id.fl_container, fragments[3], fragments[3].getClass().getName())
+                .add(R.id.fl_container, fragments[0], "1-1")
+                .add(R.id.fl_container, fragments[1], "1-2")
+                .add(R.id.fl_container, fragments[2], "1-3")
+                .add(R.id.fl_container, fragments[3], "1-4")
                 .hide(fragments[0])
                 .hide(fragments[1])
                 .hide(fragments[2])

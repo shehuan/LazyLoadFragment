@@ -7,12 +7,6 @@
     android:orientation="vertical"
     tools:context="com.shh.fragmentdemo.ui.activity.TabActivity">
 
-    <FrameLayout
-        android:id="@+id/fl_container"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp">
@@ -22,9 +16,9 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#77d353"
+            android:background="#FFDAB9"
             android:gravity="center"
-            android:text="1-1"
+            android:text="3-1"
             android:textColor="#000000" />
 
         <TextView
@@ -32,9 +26,9 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#ffbd00"
+            android:background="#E6E6FA"
             android:gravity="center"
-            android:text="1-2"
+            android:text="3-2"
             android:textColor="#000000" />
 
         <TextView
@@ -42,20 +36,17 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#00a6ff"
+            android:background="#FFE4E1"
             android:gravity="center"
-            android:text="1-3"
+            android:text="3-3"
             android:textColor="#000000" />
 
-        <TextView
-            android:id="@+id/tv_tab3"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#bc9fe3"
-            android:gravity="center"
-            android:text="1-4"
-            android:textColor="#000000" />
     </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
 </LinearLayout>

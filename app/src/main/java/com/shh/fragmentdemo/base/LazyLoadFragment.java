@@ -8,12 +8,12 @@ import android.support.v4.app.FragmentManager;
 import java.util.List;
 
 public abstract class LazyLoadFragment extends BaseFragment {
-    private boolean isViewCreated; // fragment是否已创建完成
+    private boolean isViewCreated; // 界面是否已创建完成
     private boolean isVisibleToUser; // 是否对用户可见
-    private boolean isDataLoaded; // 数据是否已加载, isNeedReload()返回false的时起作用
+    private boolean isDataLoaded; // 数据是否已请求, isNeedReload()返回false的时起作用
     private boolean isHidden = true; // 记录当前fragment的是否隐藏
 
-    // 实现具体的数据加载逻辑
+    // 实现具体的数据请求逻辑
     protected abstract void loadData();
 
     /**
@@ -65,7 +65,7 @@ public abstract class LazyLoadFragment extends BaseFragment {
     }
 
     /**
-     * ViewPager场景下，当前fragment可见，如果其子fragment也可见，则尝试让子fragment加载数据
+     * ViewPager场景下，当前fragment可见，如果其子fragment也可见，则尝试让子fragment加载请求
      */
     private void dispatchParentVisibleState() {
         FragmentManager fragmentManager = getChildFragmentManager();
@@ -90,7 +90,7 @@ public abstract class LazyLoadFragment extends BaseFragment {
     }
 
     /**
-     * ViewPager场景下，尝试加载数据
+     * ViewPager场景下，尝试请求数据
      */
     public void tryLoadData() {
         if (isViewCreated && isVisibleToUser && isParentVisible() && (isNeedReload() || !isDataLoaded)) {
@@ -101,7 +101,7 @@ public abstract class LazyLoadFragment extends BaseFragment {
     }
 
     /**
-     * show()、hide()场景下，当前fragment没隐藏，如果其子fragment也没隐藏，则尝试让子fragment加载数据
+     * show()、hide()场景下，当前fragment没隐藏，如果其子fragment也没隐藏，则尝试让子fragment请求数据
      */
     private void dispatchParentHiddenState() {
         FragmentManager fragmentManager = getChildFragmentManager();
@@ -132,7 +132,7 @@ public abstract class LazyLoadFragment extends BaseFragment {
     }
 
     /**
-     * show()、hide()场景下，尝试加载数据
+     * show()、hide()场景下，尝试请求数据
      */
     public void tryLoadData1() {
         if (!isParentHidden() && (isNeedReload() || !isDataLoaded)) {

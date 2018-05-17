@@ -10,7 +10,7 @@ import com.shh.fragmentdemo.base.LazyLoadFragment;
 
 import butterknife.OnClick;
 
-public class TabFragment1 extends LazyLoadFragment {
+public class TabFragment2 extends LazyLoadFragment {
     private static final String DATA = "data";
 
     private String data;
@@ -34,12 +34,12 @@ public class TabFragment1 extends LazyLoadFragment {
         switchTab(2);
     }
 
-    public TabFragment1() {
+    public TabFragment2() {
         // Required empty public constructor
     }
 
-    public static TabFragment1 newInstance(String data) {
-        TabFragment1 fragment = new TabFragment1();
+    public static TabFragment2 newInstance(String data) {
+        TabFragment2 fragment = new TabFragment2();
         Bundle args = new Bundle();
         args.putString(DATA, data);
         fragment.setArguments(args);
@@ -48,7 +48,7 @@ public class TabFragment1 extends LazyLoadFragment {
 
     @Override
     protected int initLayoutRes() {
-        return R.layout.fragment_layout3;
+        return R.layout.fragment_layout4;
     }
 
     @Override
@@ -60,17 +60,17 @@ public class TabFragment1 extends LazyLoadFragment {
         fragmentManager = getChildFragmentManager();
 
         fragments = new BaseFragment[3];
-        fragments[0] = TabFragment.newInstance("2-1");
-        fragments[1] = TabFragment.newInstance("2-2");
-        fragments[2] = TabFragment2.newInstance("2-3");
+        fragments[0] = TabFragment.newInstance("3-1");
+        fragments[1] = TabFragment.newInstance("3-2");
+        fragments[2] = TabFragment.newInstance("3-3");
     }
 
     @Override
     protected void initView() {
         fragmentManager.beginTransaction()
-                .add(R.id.fl_container, fragments[0], "2-1")
-                .add(R.id.fl_container, fragments[1], "2-2")
-                .add(R.id.fl_container, fragments[2], "2-3")
+                .add(R.id.fl_container, fragments[0], "3-1")
+                .add(R.id.fl_container, fragments[1], "3-2")
+                .add(R.id.fl_container, fragments[2], "3-3")
                 .hide(fragments[0])
                 .hide(fragments[1])
                 .hide(fragments[2])
@@ -93,10 +93,5 @@ public class TabFragment1 extends LazyLoadFragment {
     @Override
     protected void loadData() {
         Log.e("load", data);
-    }
-
-    @Override
-    protected boolean isNeedReload() {
-        return true;
     }
 }
