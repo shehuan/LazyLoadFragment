@@ -22,7 +22,7 @@ public class FirstLevelCFragment extends LazyLoadFragment {
 
     @OnClick(R.id.tv_data)
     public void start() {
-        if ("1-3".equals(data)){
+        if ("1-3".equals(data)) {
             startActivity(new Intent(mActivity, TabActivity.class));
         }
     }
@@ -54,7 +54,7 @@ public class FirstLevelCFragment extends LazyLoadFragment {
     @Override
     protected void initView() {
         if ("1-3".equals(data)) {
-            dataTv.setText("Open TabActivity");
+            dataTv.setText("Open FragmentManager Test");
         } else {
             dataTv.setText("content:" + data);
         }
